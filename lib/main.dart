@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:meu_app/stateful/DarkMode.dart';
+import 'package:meu_app/stateful/RandomNumber.dart';
 import 'package:meu_app/stateless/Botao.dart';
 import 'package:meu_app/stateful/Cotador.dart';
 import 'package:meu_app/stateless/SemEstado.dart';
@@ -41,9 +43,12 @@ import 'package:meu_app/stateless/User.dart';
 
  //exemplo stateful
 
- runApp(Material(
-   home Contador(),
- ));
+ /* runApp(MaterialApp(
+   home: Contador(),
+ )); */
 
-  
+  //runApp(DarkMode());
+ // runApp(RandomNumber());
+
+ runApp(UserName())
 }
