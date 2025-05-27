@@ -50,5 +50,5 @@ import 'package:meu_app/stateless/User.dart';
   //runApp(DarkMode());
  // runApp(RandomNumber());
 
- runApp(UserName())
+ runApp(Userinfos());
 }
