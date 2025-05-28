@@ -1,8 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:meu_app/stateless/User.dart';
 
 class Userdata  extends InheritedWidget{
-  final Userdata({
+ final String username;
+
+   const Userdata({
     required this.username,
     required Widget child //widget filho que herda o nome
   }) : super(child: child); //passa o filho para o construtor pai
@@ -16,13 +19,14 @@ class Userdata  extends InheritedWidget{
    *quem chama vai receder um BuildContext, ou seja o contaxto onde o whidget está
    na arvore
    */
-  static UserData of(BuildContext context){
-    final result = context.dependOnInheritedWidgetOfExactType<UserData>();
-    result result!;
+  static Userdata of (BuildContext context){
+    //este métado procura o wiget mais próximo do tipo UserData acima do widget atual
+    final result = context.dependOnInheritedWidgetOfExactType<Userdata>();
+    return result!;
   }
 
   @override
-  bool updateShouldNotify(covariant InheritedWidget oldWidget){
- return oldWidget.username != username;
+  bool updateShouldNotify(Userdata oldWidget) {
+  return oldWidget.username != username;
   }
 }

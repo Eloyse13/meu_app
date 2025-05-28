@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:meu_app/inherited/UserData.dart';
 
-class UserInfos extends StatefulWidget {
+class Userinfos extends StatelessWidget {
 @override
 Widget build(BuildContext context){
-  return UserData(
-    username: "becker"
-    child: Scaffold(
-      appBar:  AppBar(titule: Text("Perfil de úsuario"),),
+  return Userdata(
+    username: "eloyse"
+      child:   MaterialApp(
+      appBar: AppBar(title: Text("Perfil de úsuario"),),
       boby: Column(
         mainAxisAlignment:  MainAxisAlignment.center,
         children: [

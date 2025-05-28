@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class Loja extends StatefulWidget{
+class Loja extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,16 +20,8 @@ class LojaStatusPage extends StatefulWidget {
 }
 
 class _LojaStatusPageState extends State<LojaStatusPage> {
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
-}
+  bool _aberto = true;
 
-class _LojaStatusPageState extends State<LojaStatusPage> {
-  bool -aberto = true;
-
-  @override
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(title: Text("Status da loja"),),
@@ -43,11 +35,16 @@ class _LojaStatusPageState extends State<LojaStatusPage> {
               setState(() {
                 _aberto = value;
               });
-            }
-            ssecondary: context Icon(Icon.store),
-          )
+            },
+            secondary: const Icon(Icons.store),
+          ),
+          const SizedBox(height: 20,),
+          Text(_aberto ? "A loja está aberta" : "A loja está fechada",
+          style:  TextStyle(fontSize: 14,
+          color: _aberto ? Colors.greenAccent: Colors.red
+          )),
         ],
       ),
-    )
+    );
   }
 }

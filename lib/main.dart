@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:meu_app/MaterialWidget/MyMaterial.dart';
 import 'package:meu_app/stateful/DarkMode.dart';
 import 'package:meu_app/stateful/RandomNumber.dart';
+import 'package:meu_app/stateful/exercicio.dart';
 import 'package:meu_app/stateless/Botao.dart';
 import 'package:meu_app/stateful/Cotador.dart';
 import 'package:meu_app/stateless/SemEstado.dart';
@@ -50,5 +52,9 @@ import 'package:meu_app/stateless/User.dart';
   //runApp(DarkMode());
  // runApp(RandomNumber());
 
- runApp(Userinfos());
+// runApp(Userinfos());
+
+//runApp(Loja());
+
+runApp(Mymaterial());
 }
