@@ -1,5 +1,9 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:meu_app/MaterialWidget/MyMaterial.dart';
+import 'package:meu_app/MaterialWidget/cupertino/MyCupertino.dart';
+import 'package:meu_app/MaterialWidget/exerc%C3%ADcio.dart';
 import 'package:meu_app/stateful/DarkMode.dart';
 import 'package:meu_app/stateful/RandomNumber.dart';
 import 'package:meu_app/stateful/exercicio.dart';
@@ -56,5 +60,20 @@ import 'package:meu_app/stateless/User.dart';
 
 //runApp(Loja());
 
-runApp(Mymaterial());
+//runApp(Mymaterial());
+
+//runApp(exercicioMaterial());
+
+//cupertino
+
+//runApp(Mycupertino());
+
+//como decidir qual widget usar?
+
+if(Platform.isAndroid){
+  runApp(Mymaterial());
+}else{
+  runApp(Mycupertino());
+}
+
 }

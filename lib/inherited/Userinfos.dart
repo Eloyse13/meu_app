@@ -3,17 +3,19 @@ import 'package:meu_app/inherited/UserData.dart';
 
 class Userinfos extends StatelessWidget {
 @override
-Widget build(BuildContext context){
+Widget build(BuildContext context) {
   return Userdata(
-    username: "eloyse"
-      child:   MaterialApp(
-      appBar: AppBar(title: Text("Perfil de úsuario"),),
-      boby: Column(
+    username: "eloyse",
+      child:MaterialApp(
+      home: Scaffold(
+      appBar: AppBar (title: Text("Perfil de Usuario")),
+      body: Column(
         mainAxisAlignment:  MainAxisAlignment.center,
         children: [
        WelcomeMessage(),
        SizedBox(height: 20,)
         ],
+      ),
       ),
     ),
   );
@@ -21,7 +23,7 @@ Widget build(BuildContext context){
 
 }
 
-class WelcomeMessage extends StatefulWidget{
+class WelcomeMessage extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     final username = Userdata.of(context).username;
