@@ -70,10 +70,24 @@ import 'package:meu_app/stateless/User.dart';
 
 //como decidir qual widget usar?
 
-if(Platform.isAndroid){
+/* if(Platform.isAndroid){
   runApp(Mymaterial());
 }else{
-  runApp(Mycupertino());
+  runApp(Mycupertino()); 
+  }*/
+
+
+  runApp(LayoutApp),
 }
 
-}
+
+
+
+
+
+
+
+
+
+
+
